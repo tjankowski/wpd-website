@@ -1,0 +1,41 @@
+<% @menu_title = t('category.all_categories') %>
+
+<% content_for :menu_options do %>
+  <ul>
+    <% for category in Category.all do %>
+        <li class="store_menu_link">
+          <%= nav_link_to_object category.name, category  %>
+        </li>
+      <% end %>
+      <% if logged_in? %>
+        <li class="store_menu_link">
+          <% link_to new_category_url do %>
+            <%= image_tag 'document_add.png', :size => '15x15', :align => :top %>
+            <%= t('category.new_category') %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <div class="content">
+    <div>
+      <h1>
+        <%= t('category.new_category') %>
+      </h1>
+
+      <% form_for(@category) do |f| %>
+        <%= f.error_messages %>
+
+        <p>
+          <%= f.label :name, t('category.name') %>
+          <%= f.text_field :name %>
+        </p>
+        <p>
+          <%= link_to t('back'), categories_path %>
+          <%= f.submit t('create') %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+

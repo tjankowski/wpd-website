@@ -1,0 +1,24 @@
+<% @all_categories = Category.search(params[:search_category]) %>
+
+<% @menu_title = t('category.all_categories') %>
+
+<% content_for :menu_header do %>
+  <%= render :partial => 'partials/search_category' %>
+<% end %>
+
+<% content_for :menu_options do %>
+  <ul>
+    <span id="categories">
+      <%= render :partial => 'partials/category_menu_option', :collection => @all_categories %>
+    </span>
+    <% if logged_in? %>
+      <%= sortable_element 'categories', :url => sort_menu_categories_path %>
+      <li class="store_menu_link">
+        <% link_to new_category_url do %>
+          <%= image_tag 'document_add.png', :size => '15x15', :align => :top %>
+          <%= t('category.new_category') %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -1,0 +1,5 @@
+<% form_tag search_path, :method => 'get' do %>
+  <%= image_tag 'zoom.png', :size => '20x20', :align => 'top' %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag t('search'), :name => nil %>
+<% end %>

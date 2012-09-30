@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="text_align_center">
+    <% form_tag session_path do -%>
+      <h1>
+        Logowanie
+      </h1>
+      <p>
+        <label for="login"><%= t('user.login') %></label>
+        <%= text_field_tag 'login' %>
+      </p>
+
+      <p>
+        <label for="password"><%= t('user.password') %></label>
+        <%= password_field_tag 'password' %>
+      </p>
+
+      <p><%= submit_tag t('user.log_in') %></p>
+    <% end -%>
+
+    <%= render :partial => 'partials/help_text',
+      :locals => { :text => 'Zalogowanie umożliwia dostęp do zaawansowanych opcji zarządzania stroną. Proszę zalogować się korzystając z danych otrzymanych od administratora.' }  %>
+  </div>
+</div>

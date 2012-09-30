@@ -1,0 +1,14 @@
+<div class="photo">
+  <% fields_for 'product[photos_attributes][]', edit_photo do |photo_form| %>
+    <%= image_tag edit_photo.image.url(:small), :size => '50x50', :align => 'middle' %>
+    <%= photo_form.label t('photo.description') %>:
+    <%= photo_form.text_field :description, :index => nil %>
+    <% if edit_photo.new_record? %>
+      <%= remove_photo_field %>
+    <% else %>
+      <%= mark_for_destroy %>
+      <%= photo_form.hidden_field :id, :index => nil %>
+      <%= photo_form.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
+    <% end %>
+  <% end %>
+</div>

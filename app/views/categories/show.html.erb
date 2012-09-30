@@ -1,0 +1,5 @@
+<%= render :partial => 'partials/categories_menu' %>
+
+  <div>
+    <%= render :partial => 'products/product_short', :collection => @category.products %>
+  </div>

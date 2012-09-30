@@ -1,0 +1,4 @@
+<ol id="products">
+  <%= render :partial => 'sortable_product', :collection => @category.products %>
+</ol>
+<%= sortable_element 'products', :url => { :action => "sort_products", :category_id => @category }, :handle => 'handle' %>

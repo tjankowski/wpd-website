@@ -1,0 +1,31 @@
+<div class="product_short">
+  <h3>
+    <% link_to product_short do %>
+      <%= product_short.name %>
+    <% end %>
+  </h3>
+  <div class="description">
+    <table>
+      <tr>
+        <% if product_short.has_photo? %>
+          <td>
+            <% link_to product_short do %>
+              <%= image_tag product_short.main_photo_url_small, :align => 'top' %>
+            <% end %>
+          </td>
+        <% end %>
+        <td>
+          <div>
+            <% link_to product_short do  %>
+              <%= product_short.description_short %>
+            <% end %>
+          </div>
+          <div class="more">
+            <%= link_to t('see_more'), product_short %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,19 @@
+<% @menu_title = t("page.all_pages") %>
+<% content_for :menu_options do %>
+  <ul>
+          <% for page in @pages do %>
+            <li class="store_menu_link">
+              <%= nav_link_id page.title, 'pages', 'preview', page %>
+            </li>
+            <% end %>
+            <li class="store_menu_link">
+              <% link_to new_page_url do %>
+                <%= image_tag 'document_add.png', :size => '15x15', :align => :top %>
+                <%= t('page.new_page') %>
+            <% end %>
+          </li>
+        </ul>
+  <% end %>
+
+<div class="content">
+</div>

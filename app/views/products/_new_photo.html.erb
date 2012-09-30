@@ -1,0 +1,19 @@
+<div class="photo">
+  <% fields_for 'product[photos_attributes][]', new_photo do |photo_form| %>
+    <% if new_photo.new_record? %>
+      <%= photo_form.label t('photo.photo') %>:
+      <%= photo_form.file_field :image, :index => nil %>
+      <%= photo_form.label t('photo.description') %>:
+      <%= photo_form.text_field :description, :index => nil %>
+      <%= remove_photo_field %>
+    <% else %>
+      <%= image_tag new_photo.image.url(:small), :align => 'middle' %>
+      <%= photo_form.label t('photo.description') %>:
+      <%= photo_form.text_field :description, :index => nil %>
+      <%= mark_for_destroy %>
+      <%= photo_form.hidden_field :id, :index => nil %>
+      <%= photo_form.hidden_field :image, :value => new_photo.image, :index => nil %>
+      <%= photo_form.hidden_field :should_destroy, :index => nil, :class => 'should_destroy' %>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+<% content_tag_for :li, photo do %>
+  <% if logged_in? %>
+    <div class="handle">[<%= t('photo.drag&drop') %>]</div>
+  <% end %>
+  <% link_to photo.image.url, :rel => 'lightbox', :title => photo.title do %>
+    <%= image_tag photo.image.url(:small) %>
+  <% end %>
+<% end %>

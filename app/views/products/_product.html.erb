@@ -1,0 +1,46 @@
+<div class="product">
+  <h1>
+    <%= product.name %>
+  </h1>
+  <div class="description">
+    <table>
+      <tr>
+        <td>
+          <ul id="photos">
+            <%= render :partial => 'photo', :collection => product.photos %>
+          </ul>
+        </td>
+        <td>
+          <div>
+            <%= product.description %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <% if logged_in? %>
+    <%= sortable_element 'photos', :url => sort_photos_products_path, :handle => 'handle' %>
+    <div class="product_links">
+      <ul>
+        <li>
+          <% link_to edit_product_url(@product) do %>
+            <%= image_tag 'document_edit.png', :size => '15x15', :align => :top %>
+            <%= t('edit') %>
+          <% end %>
+        </li>
+        <li>
+          <% link_to @product, :confirm => t('confirm'), :method => :delete  do %>
+            <%= image_tag 'document_delete.png', :size => '15x15', :align => :top %>
+            <%= t('delete') %>
+          <% end %>
+        </li>
+        <li>
+          <% link_to :controller => 'product_category', :action => 'index', :id => @product  do %>
+            <%= image_tag 'tag.png', :size => '15x15', :align => :top %>
+            <%= t('product.add_to_category') %>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+  <% end %>
+</div>

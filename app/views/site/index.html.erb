@@ -1,0 +1,24 @@
+<div class="content">
+  <h1>Wytwarzanie Pomocy Dydaktycznych</h1>
+  <div>
+    Nasza firma powstała w 1984 roku, jest więc przedsiębiorstwem z długoletnią tradycją oraz doświadczeniem. Zajmujemy się projektowaniem, produkcją oraz bezpośrednią dystrybucją pomocy dydaktycznych i szkolnych dla
+    <ul>
+      <%= render :partial => 'category', :collection => @categories %>
+    </ul>
+    <div class="div_spaced">
+      Projektując nasze pomoce dydaktyczne korzystamy z usług wykwalifikowanych specjalistów ( metodyków, logopedów, nauczycieli, plastyków).
+    </div>
+    <div class="div_spaced">
+      W naszych wyrobach ogromną wagę przywiązujemy przede wszystkim do pieczołowitego wykończenia oraz wysokiej jakości surowców używanych w procesie produkcji. Ponadto surowce wykorzystywane w procesie produkcji posiadają aktualne atesty PZH.
+    </div>
+    <div class="div_spaced">
+      Dzięki naszym staraniom pomoce dydaktyczne produkowane przez nas charakteryzują się bardzo długą żywotnością jak również funkcjonalnością.
+    </div>
+    <div class="div_spaced">
+      Długoletnie doświadczenie oraz znajomość potrzeb klienta pozwala nam na to aby produkty miały szerokie zastosowanie w nauczaniu oraz stanowiły znakomite uzupełnienie i urozmaicenie procesu kształcenia.
+    </div>
+    <div class="div_spaced">
+      <%= link_to 'Zapraszamy do zapoznania się z naszą ofertą', categories_url %>!
+    </div>
+  </div>
+</div>

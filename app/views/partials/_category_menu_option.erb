@@ -1,0 +1,19 @@
+<% content_tag_for :li, category_menu_option, :class => 'store_menu_link' do %>
+  <%= nav_link_to_object category_menu_option.name, category_menu_option  %>
+<% end %>
+  <% if logged_in? && category_menu_option == @category %>
+    <span class="categories_links">
+      <li>
+        <% link_to edit_category_url(@category) do %>
+          <%= image_tag 'document_edit.png', :size => '15x15', :align => :top %>
+          <%= t('edit') %>
+        <% end %>
+      </li>
+      <li>
+        <% link_to @category, :confirm => t('confirm'), :method => :delete  do %>
+          <%= image_tag 'document_delete.png', :size => '15x15', :align => :top %>
+          <%= t('delete') %>
+        <% end %>
+      </li>
+    </span>
+  <% end %>

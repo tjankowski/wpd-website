@@ -1,0 +1,12 @@
+<div>
+  <% if @product.belongs_to_category?(category) %>
+    <% link_to :controller => "product_category", :action => "destroy", :category => {:name => category.name}, :id => @product do %>
+      <%= image_tag 'delete.png', :size => '15x15', :align => :top %>
+    <% end %>
+  <% else %>
+    <% link_to :controller => "product_category", :action => "create", :category => {:name => category.name}, :id => @product do %>
+      <%= image_tag 'add.png', :size => '15x15', :align => :top %>
+    <% end %>
+  <% end %>
+  <%= category.name %>
+</div>

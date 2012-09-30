@@ -1,0 +1,2 @@
+page[:add_category_form].reset
+page.replace_html "categories", :partial => "category", :collection => Category.all

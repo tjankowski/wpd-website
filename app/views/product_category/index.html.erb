@@ -1,0 +1,44 @@
+<% @menu_title = t('product.all_products') %>
+
+<% content_for :menu_options do %>
+  <ul>
+    <li class="store_menu_link">
+      <% link_to @product do %>
+        <%= image_tag 'zoom.png', :size => '15x15', :align => :top %>
+        <%= t('show') %>
+      <% end %>
+    </li>
+    <li class="store_menu_link">
+      <% link_to new_product_url do %>
+        <%= image_tag 'document_add.png', :size => '15x15', :align => :top %>
+        <%= t('product.new_product') %>
+      <% end %>
+    </li>
+    <li class="store_menu_link">
+      <% link_to products_path do %>
+        <%= image_tag 'back.png', :size => '15x15', :align => :top %>
+        <%= t('back') %>
+      <% end %>
+    </li>
+  </ul>
+<% end %>
+
+<div class="product">
+  <h1>
+    <%= @product.name %>
+  </h1>
+  <div class="content">
+    <% remote_form_for 'add_category_form', :url => {:controller => "product_category", :action => "create", :id => @product}, :html => {:id => 'add_category_form'} do %>
+  <%= t('add_or_find_product_to_category') %>:
+  <%= text_field_with_auto_complete :category, :name, {}, {:url => name_auto_complete_categories_path(:js), :method => :get, :with => "'search=' + element.value"} %>
+      <%= submit_tag t('add') %>
+    <% end %>
+    <%= observe_field 'category_name', :url => {:action => 'index'}, :frequency => 1, :with => 'category_name', :method => 'get' %>
+    <h3>
+      <%= t('category.all_categories') %>:
+    </h3>
+    <div id="categories">
+      <%= render :partial => 'category', :collection => @categories %>
+    </div>
+  </div>
+</div>

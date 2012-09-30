@@ -1,0 +1,15 @@
+<div class="content">
+  <div class="text_align_center">
+    <h1>
+      <%= t('search_title') %>
+    </h1>
+    <div>
+      <%= render :partial => 'partials/search' %>
+    </div>
+    <div>
+      <%= render :partial => 'product', :collection => @products %>
+      <%= render :partial => 'category', :collection => @categories %>
+      <%= render :partial => 'page', :collection => @pages %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+<%= render :partial => 'partials/editor' %>
+
+<% @menu_title = t("page.all_pages") %>
+
+<% content_for :menu_options do %>
+  <ul>
+    <li class="store_menu_link">
+      <% link_to new_page_url do %>
+        <%= image_tag 'document_add.png', :size => '15x15', :align => :top %>
+        <%= t('page.new_page') %>
+      <% end %>
+    </li>
+    <li class="store_menu_link">
+      <% link_to pages_path do %>
+        <%= image_tag 'back.png', :size => '15x15', :align => :top %>
+        <%= t('back') %>
+      <% end %>
+    </li>
+  </ul>
+<%end%>
+
+<div class="content">
+  <div>
+    <h1>
+      <%= t('page.new_page') %>
+    </h1>
+    <% form_for(@page) do |f| %>
+      <%= f.error_messages %>
+      <p>
+        <%= f.label :title, t('page.title') %>:
+        <%= f.text_field :title, :size => 50 %>
+      </p>
+      <p>
+        <%= f.label :body, t('page.body') %>:<br />
+        <%= f.text_area :body%>
+      </p>
+      <p class="text_align_center">
+        <%= f.submit t 'create' %>
+      </p>
+    <% end %>
+    <%= render :partial => 'partials/help_text',
+      :locals => { :text => 'W przypadku braku edytora, proszę odświeżyć stronę.'} %>
+  </div>
+</div>
