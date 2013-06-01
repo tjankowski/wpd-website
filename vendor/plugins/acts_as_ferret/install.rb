@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # acts_as_ferret install script
 require 'fileutils'
 

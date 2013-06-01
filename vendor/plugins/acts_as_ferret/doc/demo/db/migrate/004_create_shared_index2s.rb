@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateSharedIndex2s < ActiveRecord::Migration
   def self.up
     create_table :shared_index2s do |t|

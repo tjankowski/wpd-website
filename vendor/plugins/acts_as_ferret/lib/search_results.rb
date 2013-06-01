@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret
 
   # decorator that adds a total_hits accessor and will_paginate compatible 

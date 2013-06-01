@@ -1,4 +1,4 @@
-# Methods added to this helper will be available to all templates in the application.
+# -*- encoding : utf-8 -*-
 module ApplicationHelper
 
   #Zwraca odnośnik do wykorzystania w układzie nawigacji
@@ -20,5 +20,5 @@ module ApplicationHelper
       content_tag :span, text, :id => 'current_site'
     end
   end
-  
+
 end

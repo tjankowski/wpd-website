@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret
 
   # Include this module to use acts_as_ferret with model classes 

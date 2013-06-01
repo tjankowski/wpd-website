@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Ferret DRb server Capistrano tasks
 # 
 # Usage:

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Stats < ActiveRecord::Base
   def self.compute(kind)
     start_date = minimum :created_at

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ContentsController < ApplicationController
   before_filter :find_content, :only => [ :show, :edit, :update, :destroy ]
 

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 if defined?(BlankSlate)
   # Rails 2.x has it already
   module ActsAsFerret

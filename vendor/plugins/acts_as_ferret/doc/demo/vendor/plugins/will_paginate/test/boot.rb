@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 plugin_root = File.join(File.dirname(__FILE__), '..')
 
 # first look for a symlink to a copy of the framework

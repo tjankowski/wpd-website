@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Product < ActiveRecord::Base
   has_many :product_category, :dependent => :destroy
   has_many :categories, :through => :product_category

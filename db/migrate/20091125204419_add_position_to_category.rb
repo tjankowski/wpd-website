@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddPositionToCategory < ActiveRecord::Migration
   def self.up
     add_column :categories, :position, :integer

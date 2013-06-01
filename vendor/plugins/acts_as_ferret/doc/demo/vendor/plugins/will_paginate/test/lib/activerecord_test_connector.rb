@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ActiveRecordTestConnector
   cattr_accessor :able_to_connect
   cattr_accessor :connected

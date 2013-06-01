@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # search form model
 class Search
 

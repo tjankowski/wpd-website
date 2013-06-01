@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # Source: http://pastie.caboo.se/154842
 #
 # in /etc/my.cnf on the MySQL server, you can set the interactive-timeout parameter,

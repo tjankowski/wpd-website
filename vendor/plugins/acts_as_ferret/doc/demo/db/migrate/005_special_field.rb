@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class SpecialField < ActiveRecord::Migration
   def self.up
     add_column :contents, :special, :string

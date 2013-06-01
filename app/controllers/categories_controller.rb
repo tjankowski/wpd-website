@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CategoriesController < ApplicationController
   layout 'menu_layout', :except => :name_auto_complete
   before_filter :logged_in?, :except => :show

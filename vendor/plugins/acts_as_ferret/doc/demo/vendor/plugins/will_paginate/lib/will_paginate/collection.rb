@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module WillPaginate
   # Arrays returned from paginating finds are, in fact, instances of this.
   # You may think of WillPaginate::Collection as an ordinary array with some

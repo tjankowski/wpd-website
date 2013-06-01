@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProductsController < ApplicationController
   layout 'menu_layout'
   before_filter :logged_in?, :except => :show

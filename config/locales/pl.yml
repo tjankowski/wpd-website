@@ -1,205 +1,232 @@
-
-pl:
-
-  add: "Dodaj"
-  see_more: "Więcej"
-  create: "Dodaj"
-  edit: "Edytuj"
-  destroy: "Usuń"
-  delete: "Usuń"
-  remove: "Usuń"
-  update: "Zmień"
-  show: "Pokaż"
-  back: "Wróć"
-  confirm: "Czy jesteś pewien ?"
-  options: "Opcje"
-  search: "Szukaj"
-  show_all: "Pokaż wszystkie"
-  search_title: "Szukaj..."
-  add_or_find_product_to_category: "Znajdź albo dodaj do kategorii"
-  search_query_error: "Nieprawidłowy znak w zapytaniu wyszukiwania"
-  more: "Więcej"
-
-  user:
-    login: "Login"
-    password: "Hasło"
-    confirm_password: "Potwierdź hasło"
-    email: "E-mail"
-    log_in: "Zaloguj"
-    sign_in: "Zarejestruj"
-    log_out: "Wyloguj"
-    logged_in: "Zostałeś prawidłowo zalogowany"
-    logged_out: "Zostałeś prawidłowo wylogowany"
-
-  category:
-    category: "Kategoria"
-    name: "Nazwa"
-    new_category: "Nowa kategoria"
-    edit_category: "Edycja kategori"
-    all_categories: "Kategorie"
-    category_created: "Utworzono nową kategorię."
-    category_updated: "Zmieniono dane kategorii."
-    products_order: "Kolejność produktów"
-
-  product:
-    product: "Produkt"
-    name: "Nazwa"
-    description: "Opis"
-    description_short: "Krótki opis"
-    new_product: "Nowy produkt"
-    add_to_category: "Dodaj do kategori"
-    add_photo: "Dodaj zdjęcie"
-    all_products: "Produkty"
-    edit_product: "Edycja produktu"
-    product_created: "Utworzono nowy produkt."
-    product_updated: "Zmieniono dane produktu."
-
-  photo:
-    photo: "Zdjęcie"
-    description: "Opis"
-    drag&drop: "Złap"
-    all_photos: "Zdjęcia"
-
-  page:
-    page: "Strona"
-    title: "Tytuł strony"
-    body: "Zawartość strony"
-    new_page: "Nowa strona"
-    edit_page: "Edycja strony"
-    all_pages: "Strony"
-    page_created: "Utworzono nową stronę."
-    page_updated: "Zmieniono dane strony."
-
-  store:
-    menu_title: "Kategorie"
-
-  number:
-    format:
-      separator: ","
-      delimiter: " "
-      precision: 2
-    currency:
-      format:
-        format: "%n %u"
-        unit: "PLN"
-    percentage:
-      format:
-        delimiter: ""
-    precision:
-      format:
-        delimiter: ""
-    human:
-      format:
-        delimiter: ""
-        precision: 1
-      storage_units:
-        format: "%n %u"
-        units:
-          byte:
-            one:   "bajt"
-            other: "bajty"
-          kb: "KB"
-          mb: "MB"
-          gb: "GB"
-          tb: "TB"
-
-  date:
-    formats:
-      default: "%d-%m-%Y"
-      short: "%d %b"
-      long: "%d %B %Y"
-
-    day_names: [Niedziela, Poniedziałek, Wtorek, Środa, Czwartek, Piątek, Sobota]
-    abbr_day_names: [nie, pon, wto, śro, czw, pia, sob]
-
-    month_names: [~, Styczeń, Luty, Marzec, Kwiecień, Maj, Czerwiec, Lipiec, Sierpień, Wrzesień, Październik, Listopad, Grudzień]
-    abbr_month_names: [~, sty, lut, mar, kwi, maj, cze, lip, sie, wrz, paź, lis, gru]
-    order: [ :year, :month, :day ]
-
-  time:
-    formats:
-      default: "%a, %d %b %Y, %H:%M:%S %z"
-      short: "%d %b, %H:%M"
-      long: "%d %B %Y, %H:%M"
-    am: "przed południem"
-    pm: "po południu"
-
-  datetime:
-    distance_in_words:
-      half_a_minute: "pół minuty"
-      less_than_x_seconds:
-        one:   "mniej niż sekundę"
-        few:   "mniej niż {{count}} sekundy"
-        other: "mniej niż {{count}} sekund"
-      x_seconds:
-        one:   "sekundę"
-        few:   "{{count}} sekundy"
-        other: "{{count}} sekund"
-      less_than_x_minutes:
-        one:   "mniej niż minutę"
-        two:   "mniej niż {{count}} minuty"
-        three:   "mniej niż {{count}} minuty"
-        four:   "mniej niż {{count}} minuty"
-        few:   "mniej niż {{count}} minuty"
-        other: "mniej niż {{count}} minut"
-      x_minutes:
-        one:   "minutę"
-        two:   "{{count}} minuty"
-        three: "{{count}} minuty"
-        four:  "{{count}} minuty"
-        few:   "{{count}} minuty"
-        other: "{{count}} minut"
-      about_x_hours:
-        one:   "około godziny"
-        other: "około {{count}} godzin"
-      x_days:
-        one:   "1 dzień"
-        other: "{{count}} dni"
-      about_x_months:
-        one:   "około miesiąca"
-        other: "około {{count}} miesięcy"
-      x_months:
-        one:   "1 miesiąc"
-        few:   "{{count}} miesiące"
-        other: "{{count}} miesięcy"
-      about_x_years:
-        one:   "około roku"
-        other: "około {{count}} lat"
-      over_x_years:
-        one:   "ponad rok"
-        few:   "ponad {{count}} lata"
-        other: "ponad {{count}} lat"
-
-  activerecord:
-    errors:
-      template:
-        header:
-          one:    "{{model}} nie został zachowany z powodu jednego błędu"
-          other:  "{{model}} nie został zachowany z powodu {{count}} błędów"
-        body: "Błędy dotyczą następujących pól:"
-      messages:
-        inclusion: "nie znajduje się na liście dopuszczalnych wartości"
-        exclusion: "znajduje się na liście zabronionych wartości"
-        invalid: "jest nieprawidłowe"
-        confirmation: "nie zgadza się z potwierdzeniem"
+--- 
+pl: 
+  activerecord: 
+    errors: 
+      messages: 
         accepted: "musi być zaakceptowane"
-        empty: "nie może być puste"
         blank: "nie może być puste"
+        confirmation: "nie zgadza się z potwierdzeniem"
+        empty: "nie może być puste"
+        equal_to: "musi być równe {{count}}"
+        even: "musi być parzyste"
+        exclusion: "znajduje się na liście zabronionych wartości"
+        greater_than: "musi być większe niż {{count}}"
+        greater_than_or_equal_to: "musi być większe lub równe {{count}}"
+        inclusion: "nie znajduje się na liście dopuszczalnych wartości"
+        invalid: "jest nieprawidłowe"
+        less_than: "musie być mniejsze niż {{count}}"
+        less_than_or_equal_to: "musi być mniejsze lub równe {{count}}"
+        not_a_number: "nie jest liczbą"
+        odd: "musi być nieparzyste"
+        taken: "zostało już zajęte"
         too_long: "jest za długie (maksymalnie {{count}} znaków)"
         too_short: "jest za krótkie (minimalnie {{count}} znaków)"
         wrong_length: "jest nieprawidłowej długości (powinna wynosić {{count}} znaków)"
-        taken: "zostało już zajęte"
-        not_a_number: "nie jest liczbą"
-        greater_than: "musi być większe niż {{count}}"
-        greater_than_or_equal_to: "musi być większe lub równe {{count}}"
-        equal_to: "musi być równe {{count}}"
-        less_than: "musie być mniejsze niż {{count}}"
-        less_than_or_equal_to: "musi być mniejsze lub równe {{count}}"
-        odd: "musi być nieparzyste"
-        even: "musi być parzyste"
-
-  support:
-    array:
-      sentence_connector: "i"
+      template: 
+        body: "Błędy dotyczą następujących pól:"
+        header: 
+          one: "{{model}} nie został zachowany z powodu jednego błędu"
+          other: "{{model}} nie został zachowany z powodu {{count}} błędów"
+  add: Dodaj
+  add_or_find_product_to_category: "Znajdź albo dodaj do kategorii"
+  back: Wróć
+  category: 
+    all_categories: Kategorie
+    category: Kategoria
+    category_created: "Utworzono nową kategorię."
+    category_updated: "Zmieniono dane kategorii."
+    edit_category: "Edycja kategori"
+    name: Nazwa
+    new_category: "Nowa kategoria"
+    products_order: "Kolejność produktów"
+  confirm: "Czy jesteś pewien ?"
+  create: Dodaj
+  date: 
+    abbr_day_names: 
+      - nie
+      - pon
+      - wto
+      - śro
+      - czw
+      - pia
+      - sob
+    abbr_month_names: 
+      - ~
+      - sty
+      - lut
+      - mar
+      - kwi
+      - maj
+      - cze
+      - lip
+      - sie
+      - wrz
+      - paź
+      - lis
+      - gru
+    day_names: 
+      - Niedziela
+      - Poniedziałek
+      - Wtorek
+      - Środa
+      - Czwartek
+      - Piątek
+      - Sobota
+    formats: 
+      default: "%d-%m-%Y"
+      long: "%d %B %Y"
+      short: "%d %b"
+    month_names: 
+      - ~
+      - Styczeń
+      - Luty
+      - Marzec
+      - Kwiecień
+      - Maj
+      - Czerwiec
+      - Lipiec
+      - Sierpień
+      - Wrzesień
+      - Październik
+      - Listopad
+      - Grudzień
+    order: 
+      - !ruby/symbol year
+      - !ruby/symbol month
+      - !ruby/symbol day
+  datetime: 
+    distance_in_words: 
+      about_x_hours: 
+        one: "około godziny"
+        other: "około {{count}} godzin"
+      about_x_months: 
+        one: "około miesiąca"
+        other: "około {{count}} miesięcy"
+      about_x_years: 
+        one: "około roku"
+        other: "około {{count}} lat"
+      half_a_minute: "pół minuty"
+      less_than_x_minutes: 
+        few: "mniej niż {{count}} minuty"
+        four: "mniej niż {{count}} minuty"
+        one: "mniej niż minutę"
+        other: "mniej niż {{count}} minut"
+        three: "mniej niż {{count}} minuty"
+        two: "mniej niż {{count}} minuty"
+      less_than_x_seconds: 
+        few: "mniej niż {{count}} sekundy"
+        one: "mniej niż sekundę"
+        other: "mniej niż {{count}} sekund"
+      over_x_years: 
+        few: "ponad {{count}} lata"
+        one: "ponad rok"
+        other: "ponad {{count}} lat"
+      x_days: 
+        one: "1 dzień"
+        other: "{{count}} dni"
+      x_minutes: 
+        few: "{{count}} minuty"
+        four: "{{count}} minuty"
+        one: minutę
+        other: "{{count}} minut"
+        three: "{{count}} minuty"
+        two: "{{count}} minuty"
+      x_months: 
+        few: "{{count}} miesiące"
+        one: "1 miesiąc"
+        other: "{{count}} miesięcy"
+      x_seconds: 
+        few: "{{count}} sekundy"
+        one: sekundę
+        other: "{{count}} sekund"
+  delete: Usuń
+  destroy: Usuń
+  edit: Edytuj
+  more: Więcej
+  number: 
+    currency: 
+      format: 
+        format: "%n %u"
+        unit: PLN
+    format: 
+      delimiter: " "
+      precision: 2
+      separator: ","
+    human: 
+      format: 
+        delimiter: ""
+        precision: 1
+      storage_units: 
+        format: "%n %u"
+        units: 
+          byte: 
+            one: bajt
+            other: bajty
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage: 
+      format: 
+        delimiter: ""
+    precision: 
+      format: 
+        delimiter: ""
+  options: Opcje
+  page: 
+    all_pages: Strony
+    body: "Zawartość strony"
+    edit_page: "Edycja strony"
+    new_page: "Nowa strona"
+    page: Strona
+    page_created: "Utworzono nową stronę."
+    page_updated: "Zmieniono dane strony."
+    title: "Tytuł strony"
+  photo: 
+    all_photos: Zdjęcia
+    description: Opis
+    drag&drop: Złap
+    photo: Zdjęcie
+  product: 
+    add_photo: "Dodaj zdjęcie"
+    add_to_category: "Dodaj do kategori"
+    all_products: Produkty
+    description: Opis
+    description_short: "Krótki opis"
+    edit_product: "Edycja produktu"
+    name: Nazwa
+    new_product: "Nowy produkt"
+    product: Produkt
+    product_created: "Utworzono nowy produkt."
+    product_updated: "Zmieniono dane produktu."
+  remove: Usuń
+  search: Szukaj
+  search_query_error: "Nieprawidłowy znak w zapytaniu wyszukiwania"
+  search_title: Szukaj...
+  see_more: Więcej
+  show: Pokaż
+  show_all: "Pokaż wszystkie"
+  store: 
+    menu_title: Kategorie
+  support: 
+    array: 
+      sentence_connector: i
       skip_last_comma: true
- 
+  time: 
+    am: "przed południem"
+    formats: 
+      default: "%a, %d %b %Y, %H:%M:%S %z"
+      long: "%d %B %Y, %H:%M"
+      short: "%d %b, %H:%M"
+    pm: "po południu"
+  update: Zmień
+  user: 
+    confirm_password: "Potwierdź hasło"
+    email: E-mail
+    log_in: Zaloguj
+    log_out: Wyloguj
+    logged_in: "Zostałeś prawidłowo zalogowany"
+    logged_out: "Zostałeś prawidłowo wylogowany"
+    login: Login
+    password: Hasło
+    sign_in: Zarejestruj

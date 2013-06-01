@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret
 
   # mixed into the FerretResult and AR classes calling acts_as_ferret

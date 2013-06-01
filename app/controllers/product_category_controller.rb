@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ProductCategoryController < ApplicationController
   layout 'menu_layout'
   before_filter :logged_in?

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddTypeToContents < ActiveRecord::Migration
   def self.up
     add_column :contents, :type, :string

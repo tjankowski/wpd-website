@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ProductCategoryHelper
 
   def remove_from_category(category)

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'will_paginate/core_ext'
 require 'will_paginate/collection'
 require 'will_paginate/finder'

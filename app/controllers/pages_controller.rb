@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class PagesController < ApplicationController
   layout :select_layout
   before_filter :logged_in?, :except => :show

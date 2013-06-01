@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 require 'restful_authentication/rails_commands'
 class AuthenticatedGenerator < Rails::Generator::NamedBase
   default_options :skip_migration => false,

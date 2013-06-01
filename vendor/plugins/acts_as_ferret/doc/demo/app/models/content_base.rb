@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # common base class for Content and SpecialContent
 class ContentBase < ActiveRecord::Base
   set_table_name 'contents'

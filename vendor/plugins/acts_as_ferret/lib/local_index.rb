@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret
   class LocalIndex < AbstractIndex
     include MoreLikeThis::IndexMethods

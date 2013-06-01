@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table "users", :force => true do |t|
@@ -17,7 +18,7 @@ class CreateUsers < ActiveRecord::Migration
     user.email = APP_CONFIG['admin_email']
     user.password = APP_CONFIG['admin_password']
     user.password_confirmation = APP_CONFIG['admin_password']
-    user.save(false)
+    user.save(:validate => false)
   end
 
   def self.down

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Photo < ActiveRecord::Base
   belongs_to :product
   has_attached_file :image, :styles => { :small => "150x150>" },

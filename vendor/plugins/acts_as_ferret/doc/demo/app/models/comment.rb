@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 
 class PlainAsciiAnalyzer < ::Ferret::Analysis::Analyzer
   include ::Ferret::Analysis

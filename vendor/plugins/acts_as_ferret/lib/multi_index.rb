@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret #:nodoc:
 
   # Base class for remote and local multi-indexes

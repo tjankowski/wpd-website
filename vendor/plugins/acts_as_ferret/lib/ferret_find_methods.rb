@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret
   # Ferret search logic common to single-class indexes, shared indexes and
   # multi indexes.

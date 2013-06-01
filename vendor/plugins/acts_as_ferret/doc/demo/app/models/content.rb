@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Content < ContentBase #ActiveRecord::Base
 
   def self.per_page; 10; end

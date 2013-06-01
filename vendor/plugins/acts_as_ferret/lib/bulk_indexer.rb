@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret
   class BulkIndexer
     def initialize(args = {})

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 dirname = File.dirname(__FILE__)
 require File.join(dirname, '..', 'boot')
 require File.join(dirname, 'activerecord_test_connector')

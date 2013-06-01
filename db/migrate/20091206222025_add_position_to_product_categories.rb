@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddPositionToProductCategories < ActiveRecord::Migration
   def self.up
     add_column :product_categories, :position, :integer

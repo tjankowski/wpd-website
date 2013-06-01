@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddPositionToPhoto < ActiveRecord::Migration
   def self.up
     add_column :photos, :position, :integer

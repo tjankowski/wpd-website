@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Admin::BackendController < AdminAreaController
 
   def search

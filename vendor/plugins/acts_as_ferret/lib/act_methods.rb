@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 module ActsAsFerret #:nodoc:
 
   # This module defines the acts_as_ferret method and is included into 
