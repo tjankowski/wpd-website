@@ -2,7 +2,7 @@
 module ProductsHelper
 
   def add_photo_link(name)
-    link_to_function(image_tag('picture.png', :size => '15x15', :align => :top)+" "+name) do |page|
+    link_to_function(image_tag('picture.png', :size => '15x15', :align => :top)+" "+name, nil) do |page|
       page.insert_html :bottom, :photos, :partial => 'new_photo', :object => Photo.new
     end
   end

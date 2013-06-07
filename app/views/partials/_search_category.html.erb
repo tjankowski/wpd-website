@@ -1,8 +1,8 @@
 <div class="text_align_center">
-  <% form_tag categories_path, :method => 'get' do %>
+  <% form_tag oferta_path, :method => 'get' do %>
     <%= text_field_tag :search_category, params[:search_category], :autocomplete => 'off' %><br />
-    <small><%= link_to_remote t('show_all'), :url => categories_path, :method => 'get' %></small>
+    <small><%= link_to t('show_all'), :url => oferta_path, :method => 'get', :remote => true %></small>
     <%= submit_tag t('search'), :name => nil %>
   <% end %>
-  <%= observe_field 'search_category', :url => categories_path, :frequency => 2, :with => 'search_category', :method => 'get' %>
+  <%#= observe_field 'search_category', :url => oferta_path, :frequency => 2, :with => 'search_category', :method => 'get' %>
 </div>

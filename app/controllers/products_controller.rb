@@ -2,6 +2,7 @@
 class ProductsController < ApplicationController
   layout 'menu_layout'
   before_filter :logged_in?, :except => :show
+  respond_to :html, :xml
 
   # GET /products
   # GET /products.xml
@@ -9,10 +10,7 @@ class ProductsController < ApplicationController
     @products = Product.all
     @title = @title + ' - ' + 'Wszystkie dostępne pomoce dydaktyczne, szkolne, naukowe'
     @description = 'Wszystkie dostępne pomoce dydaktyczne, szkolne, naukowe.'
-    respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @products }
-    end
+    respond_with @products
   end
 
   # GET /products/1
@@ -22,10 +20,7 @@ class ProductsController < ApplicationController
     @title = @title + ' - ' + @product.name
     @description = 'Szczegółowy opis i zdjęcia pomocy dydaktycznej, naukowej, szkolnej ' + @product.name
     @keywords += ', oferta, ' + @product.name
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @product }
-    end
+    respond_with @product
   end
 
   # GET /products/new
@@ -33,16 +28,14 @@ class ProductsController < ApplicationController
   def new
     @product = Product.new
      @title = @title + ' - ' + 'Nowy produkt'
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @product }
-    end
+    respond_with @product
   end
 
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
     @title = @title + ' - ' + 'Edycja produktu ' + @product.name
+    respond_with @product
   end
 
   # POST /products
@@ -50,16 +43,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
 
-    respond_to do |format|
-      if @product.save
-        flash[:notice] = t('product.product_created')
-        format.html { redirect_to(@product) }
-        format.xml  { render :xml => @product, :status => :created, :location => @product }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
-      end
+    if @product.save
+      flash[:notice] = t('product.product_created')
     end
+    respond_with @product
   end
 
   # PUT /products/1
@@ -67,16 +54,10 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
 
-    respond_to do |format|
-      if @product.update_attributes(params[:product])
-        flash[:notice] = t('product.product_updated')
-        format.html { redirect_to(@product) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
-      end
+    if @product.update_attributes(params[:product])
+      flash[:notice] = t('product.product_updated')
     end
+    respond_with @product
   end
 
   # DELETE /products/1
@@ -84,11 +65,7 @@ class ProductsController < ApplicationController
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
-
-    respond_to do |format|
-      format.html { redirect_to(products_url) }
-      format.xml  { head :ok }
-    end
+    respond_with @product
   end
 
   def sort_photos

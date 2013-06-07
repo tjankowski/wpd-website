@@ -8,7 +8,7 @@ WpdWebsite::Application.routes.draw do
   # Keep in mind you can assign values other than :controller and :action
   resources :users
 
-  resources :session
+  resources :sessions
 
   resources :categories, :has_many => :products, :collection => {:name_auto_complete => :get, :sort_menu => :post, :sort_products => :post }, :as => 'oferta'
 
